@@ -22,3 +22,4 @@ Things to add:
 - Add activity indicator while fetching from API
   - Although the results seemed to populate fairly quickly so this didn't seem necessary as the indicator would briefly flash
  
+ Demo: https://youtu.be/TVkL6x6imq4

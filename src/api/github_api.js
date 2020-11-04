@@ -1,6 +1,8 @@
 import {Alert} from 'react-native';
 import moment from 'moment';
 
+import {string} from '../constants/global_strings.js';
+
 /**
  * Check the number of Github API calls remaining
  *
@@ -19,11 +21,15 @@ const checkRateLimit = async () => {
 
   // display an Alert if there are no API calls left and return
   if (rateLimit.remaining === 0) {
-    Alert.alert(`API rate limit exceeded. Please try again ${fromNow}.`);
+    Alert.alert(
+      string.ALERT_RATE_LIMIT_TITLE,
+      `API rate limit exceeded. Please try again ${fromNow}.`,
+    );
   }
   // display an Alert if there are only 10 searches left
   else if (rateLimit.remaining < 10) {
     Alert.alert(
+      string.ALERT_RATE_LIMIT_TITLE,
       `You have less than 10 API calls remaining. The limit will reset ${fromNow}.`,
     );
   }

@@ -4,4 +4,5 @@ export const string = {
   SEARCH_BAR_PLACEHOLDER: 'Enter username',
   NO_USERS_FOUND: 'No users found.',
   NUMBER_OF_REPOS: 'Number of repos:',
+  ALERT_RATE_LIMIT_TITLE: 'Warning: API Rate Limit',
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   FlatList,
+  LogBox,
   SafeAreaView,
   StyleSheet,
   View,
@@ -24,6 +25,14 @@ class App extends React.Component {
     userData: [],
     noUsersFound: false,
   };
+
+  /**
+   * componentDidMount
+   */
+  componentDidMount() {
+    // disable yellox box warnings
+    LogBox.ignoreAllLogs(true);
+  }
 
   /**
    * Handles when the user types in the SearchBar
